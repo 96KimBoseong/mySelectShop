@@ -6,6 +6,7 @@ import com.myselectshop.domain.myshop.dto.ProductResponseDto;
 import com.myselectshop.domain.myshop.model.Product;
 import com.myselectshop.domain.myshop.repository.ProductRepository;
 import com.myselectshop.domain.naver.dto.ItemDto;
+import com.myselectshop.domain.user.model.User;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +22,8 @@ public class ProductService {
 
     }
 
-    public ProductResponseDto createProduct(ProductRequestDto requestDto) {
-        Product product = productRepository.save(new Product(requestDto));
+    public ProductResponseDto createProduct(ProductRequestDto requestDto, User user) {
+        Product product = productRepository.save(new Product(requestDto, user));
         return new ProductResponseDto(product);
     }
 
@@ -43,8 +44,8 @@ public class ProductService {
         return new ProductResponseDto(product);
     }
 
-    public List<ProductResponseDto> getProducts() {
-        List<Product> productList = productRepository.findAll();
+    public List<ProductResponseDto> getProducts(User user) {
+        List<Product> productList = productRepository.findAllByUser(user);
         List<ProductResponseDto> responseDtoList = new ArrayList<>();
 
         for (Product product : productList) {
@@ -61,4 +62,13 @@ public class ProductService {
         product.updateByItemDto(itemDto);
     }
 
+    public List<ProductResponseDto> getAllProducts() {
+        List<Product> productList = productRepository.findAll();
+        List<ProductResponseDto> responseDtoList = new ArrayList<>();
+
+        for (Product product : productList) {
+            responseDtoList.add(new ProductResponseDto(product));
+        }
+        return responseDtoList;
+    }
 }

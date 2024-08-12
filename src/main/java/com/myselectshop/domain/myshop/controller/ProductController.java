@@ -4,6 +4,8 @@ import com.myselectshop.domain.myshop.dto.ProductMypriceRequestDto;
 import com.myselectshop.domain.myshop.dto.ProductRequestDto;
 import com.myselectshop.domain.myshop.dto.ProductResponseDto;
 import com.myselectshop.domain.myshop.service.ProductService;
+import com.myselectshop.security.UserDetailsImpl;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,9 +20,9 @@ public class ProductController {
     }
 
     @PostMapping("/products")
-    public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto) {
+    public ProductResponseDto createProduct(@RequestBody ProductRequestDto requestDto, @AuthenticationPrincipal UserDetailsImpl userDetails) {
         // 응답 보내기
-        return productService.createProduct(requestDto);
+        return productService.createProduct(requestDto, userDetails.getUser());
     }
 
     // 관심 상품 희망 최저가 등록하기
@@ -31,9 +33,17 @@ public class ProductController {
     }
 
     // 관심 상품 조회하기
+    // 관심 상품 조회하기
     @GetMapping("/products")
-    public List<ProductResponseDto> getProducts() {
+    public List<ProductResponseDto> getProducts(@AuthenticationPrincipal UserDetailsImpl userDetails) {
         // 응답 보내기
-        return productService.getProducts();
+        return productService.getProducts(userDetails.getUser());
     }
+
+    @GetMapping("/admin/products")
+    public List<ProductResponseDto> getAllProducts(){
+        return productService.getAllProducts();
+    }
+
+
 }
