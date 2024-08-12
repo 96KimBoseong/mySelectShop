@@ -1,6 +1,7 @@
 package com.myselectshop.domain.Folder.controller;
 
 import com.myselectshop.domain.Folder.dto.FolderRequestDto;
+import com.myselectshop.domain.Folder.dto.FolderResponseDto;
 import com.myselectshop.domain.Folder.service.FolderService;
 import com.myselectshop.security.UserDetailsImpl;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -26,6 +27,10 @@ public class FolderController {
 
         folderService.addFolders(folderNames, userDetails.getUser());
     }
-
+    // 회원이 등록한 모든 폴더 조회
+    @GetMapping("/folders")
+    public List<FolderResponseDto> getFolders(@AuthenticationPrincipal UserDetailsImpl userDetails) {
+        return folderService.getFolders(userDetails.getUser());
+    }
 
 }
