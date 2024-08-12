@@ -8,12 +8,12 @@ import com.myselectshop.domain.myshop.repository.ProductRepository;
 import com.myselectshop.domain.naver.dto.ItemDto;
 import com.myselectshop.domain.user.model.User;
 import com.myselectshop.domain.user.model.UserRoleEnum;
-import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +48,7 @@ public class ProductService {
 
         return new ProductResponseDto(product);
     }
-
+    @Transactional(readOnly = true)
     public Page<ProductResponseDto> getProducts(User user,
                                                 int page, int size, String sortBy, boolean isAsc) {
         // 페이징 처리
