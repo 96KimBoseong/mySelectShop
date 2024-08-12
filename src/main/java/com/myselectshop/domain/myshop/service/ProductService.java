@@ -12,7 +12,6 @@ import com.myselectshop.domain.myshop.repository.ProductRepository;
 import com.myselectshop.domain.naver.dto.ItemDto;
 import com.myselectshop.domain.user.model.User;
 import com.myselectshop.domain.user.model.UserRoleEnum;
-import com.myselectshop.domain.user.repository.UserRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -31,7 +30,7 @@ public class ProductService {
     private final FolderRepository folderRepository;
     private final ProductFolderRepository productFolderRepository;
 
-    public ProductService(ProductRepository productRepository, FolderRepository folderRepository, UserRepository userRepository, ProductFolderRepository productFolderRepository) {
+    public ProductService(ProductRepository productRepository, FolderRepository folderRepository, ProductFolderRepository productFolderRepository) {
         this.productRepository = productRepository;
         this.folderRepository = folderRepository;
         this.productFolderRepository = productFolderRepository;
