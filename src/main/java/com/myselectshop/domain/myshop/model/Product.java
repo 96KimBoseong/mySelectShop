@@ -1,6 +1,6 @@
 package com.myselectshop.domain.myshop.model;
 
-import com.myselectshop.domain.Folder.model.ProductFolder;
+import com.myselectshop.domain.folder.model.ProductFolder;
 import com.myselectshop.domain.myshop.dto.ProductMypriceRequestDto;
 import com.myselectshop.domain.myshop.dto.ProductRequestDto;
 import com.myselectshop.domain.naver.dto.ItemDto;

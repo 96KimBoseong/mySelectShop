@@ -1,7 +1,7 @@
 package com.myselectshop.domain.myshop.mvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.myselectshop.domain.Folder.service.FolderService;
+import com.myselectshop.domain.folder.service.FolderService;
 import com.myselectshop.domain.myshop.controller.ProductController;
 import com.myselectshop.domain.myshop.dto.ProductRequestDto;
 import com.myselectshop.domain.myshop.service.ProductService;

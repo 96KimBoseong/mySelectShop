@@ -1,6 +1,6 @@
-package com.myselectshop.domain.Folder.repository;
+package com.myselectshop.domain.folder.repository;
 
-import com.myselectshop.domain.Folder.model.Folder;
+import com.myselectshop.domain.folder.model.Folder;
 import com.myselectshop.domain.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 

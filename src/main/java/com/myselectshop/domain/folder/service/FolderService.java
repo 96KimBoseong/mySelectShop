@@ -1,8 +1,8 @@
-package com.myselectshop.domain.Folder.service;
+package com.myselectshop.domain.folder.service;
 
-import com.myselectshop.domain.Folder.dto.FolderResponseDto;
-import com.myselectshop.domain.Folder.model.Folder;
-import com.myselectshop.domain.Folder.repository.FolderRepository;
+import com.myselectshop.domain.folder.dto.FolderResponseDto;
+import com.myselectshop.domain.folder.model.Folder;
+import com.myselectshop.domain.folder.repository.FolderRepository;
 import com.myselectshop.domain.user.model.User;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.myselectshop.domain.Folder.model;
+package com.myselectshop.domain.folder.model;
 
 import com.myselectshop.domain.myshop.model.Product;
 import jakarta.persistence.*;

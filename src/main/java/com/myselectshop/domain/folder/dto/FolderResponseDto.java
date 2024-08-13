@@ -1,6 +1,6 @@
-package com.myselectshop.domain.Folder.dto;
+package com.myselectshop.domain.folder.dto;
 
-import com.myselectshop.domain.Folder.model.Folder;
+import com.myselectshop.domain.folder.model.Folder;
 import lombok.Getter;
 
 @Getter

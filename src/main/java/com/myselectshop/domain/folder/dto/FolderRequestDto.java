@@ -1,4 +1,4 @@
-package com.myselectshop.domain.Folder.dto;
+package com.myselectshop.domain.folder.dto;
 
 import lombok.Getter;
 

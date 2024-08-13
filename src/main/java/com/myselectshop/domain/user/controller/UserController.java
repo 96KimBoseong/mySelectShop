@@ -1,7 +1,7 @@
 package com.myselectshop.domain.user.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.myselectshop.domain.Folder.service.FolderService;
+import com.myselectshop.domain.folder.service.FolderService;
 import com.myselectshop.domain.user.dto.SignupRequestDto;
 import com.myselectshop.domain.user.dto.UserInfoDto;
 import com.myselectshop.domain.user.model.UserRoleEnum;

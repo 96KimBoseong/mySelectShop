@@ -1,7 +1,7 @@
 package com.myselectshop.domain.myshop.dto;
 
-import com.myselectshop.domain.Folder.dto.FolderResponseDto;
-import com.myselectshop.domain.Folder.model.ProductFolder;
+import com.myselectshop.domain.folder.dto.FolderResponseDto;
+import com.myselectshop.domain.folder.model.ProductFolder;
 import com.myselectshop.domain.myshop.model.Product;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

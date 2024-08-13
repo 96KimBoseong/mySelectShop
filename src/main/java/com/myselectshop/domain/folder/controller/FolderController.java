@@ -1,11 +1,10 @@
-package com.myselectshop.domain.Folder.controller;
+package com.myselectshop.domain.folder.controller;
 
-import com.myselectshop.domain.Folder.dto.FolderRequestDto;
-import com.myselectshop.domain.Folder.dto.FolderResponseDto;
-import com.myselectshop.domain.Folder.service.FolderService;
+import com.myselectshop.domain.folder.dto.FolderRequestDto;
+import com.myselectshop.domain.folder.dto.FolderResponseDto;
+import com.myselectshop.domain.folder.service.FolderService;
 import com.myselectshop.security.UserDetailsImpl;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

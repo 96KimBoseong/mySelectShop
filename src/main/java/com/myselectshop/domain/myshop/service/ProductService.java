@@ -1,9 +1,9 @@
 package com.myselectshop.domain.myshop.service;
 
-import com.myselectshop.domain.Folder.model.Folder;
-import com.myselectshop.domain.Folder.model.ProductFolder;
-import com.myselectshop.domain.Folder.repository.FolderRepository;
-import com.myselectshop.domain.Folder.repository.ProductFolderRepository;
+import com.myselectshop.domain.folder.model.Folder;
+import com.myselectshop.domain.folder.model.ProductFolder;
+import com.myselectshop.domain.folder.repository.FolderRepository;
+import com.myselectshop.domain.folder.repository.ProductFolderRepository;
 import com.myselectshop.domain.myshop.dto.ProductMypriceRequestDto;
 import com.myselectshop.domain.myshop.dto.ProductRequestDto;
 import com.myselectshop.domain.myshop.dto.ProductResponseDto;
